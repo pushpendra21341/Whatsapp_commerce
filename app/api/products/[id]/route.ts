@@ -106,7 +106,7 @@ export async function PUT(
 
   /* Delete removed images */
   const imagesToDelete = product.images.filter(
-    (img) => !existingImages?.includes(img)
+    (img: string) => !existingImages?.includes(img)
   );
 
   for (const img of imagesToDelete) {
